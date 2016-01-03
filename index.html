@@ -1,0 +1,250 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="components/loader.js"></script>
+<script src="js/app.js"></script>
+<script src="js/QuestionIchiranPage/QuestionIchiranPage.js"></script>
+<script src="js/theAnswerPage/theAnswerPage.js"></script>
+<script src="js/theQuestionPage/theQuestionPage.js"></script>
+<script src="js/YearPage/YearPage.js"></script>
+<script src="js/aboutDataBase/databaseMain.js"></script>
+<script src="js/aboutDataBase/alterDB.js"></script>
+<script src="js/aboutDataBase/Insert_H_QUESTION.js"></script>
+<script src="js/aboutDataBase/Insert_H_ANSWER.js"></script>
+<script src="js/aboutDataBase/Insert_Q_21.js"></script>
+<script src="js/aboutDataBase/Insert_Q_22.js"></script>
+<script src="js/aboutDataBase/Insert_Q_23.js"></script>
+<script src="js/aboutDataBase/Insert_Q_24.js"></script>
+<script src="js/aboutDataBase/Insert_Q_25.js"></script>
+<script src="js/aboutDataBase/Insert_Q_26.js"></script>
+<script src="js/aboutDataBase/Insert_A_21.js"></script>
+<script src="js/aboutDataBase/Insert_A_22.js"></script>
+<script src="js/aboutDataBase/Insert_A_23.js"></script>
+<script src="js/aboutDataBase/Insert_A_24.js"></script>
+<script src="js/aboutDataBase/Insert_A_25.js"></script>
+<script src="js/aboutDataBase/Insert_A_26.js"></script>
+<script src="js/utility.js"></script>
+<script src="js/cssua.min.js"></script>
+</head>
+<body>
+
+    
+    
+    <!--start YearPage -->
+    <div data-role="page" class="type-interior" id="YearPage">
+        <header data-role="header" data-position="fixed" data-theme="b"   data-tap-toggle="false">
+            <h1>年度選択</h1>
+        </header>
+        <div data-role="content">
+            <div class="content-primary">       
+                <ul data-role="listview" data-theme="d" data-divider-theme="d"  data-split-icon="gear" id="YearPageUl">
+                    <li data-role="list-divider">平成21年度</li>
+                    <!--<li name="21,春" onclick=setQuestionInfor(this)><a href="#testPages" >春<p class="ui-li-aside" id="li_21Haru"></p></a></li>-->
+                    <li name="21,春" onclick=setQuestionInfor(this) id="21noHaru">
+                        <a href="#testPages" >春<p class="ui-li-aside" id="li_21Haru">正解数: /25<br>未正解数 /25<br>未実施数 /25<br></p></a>
+                        <a href="#purchase" data-rel="popup" data-position-to="window" class="configListView">Purchase album</a>
+                    </li>
+                    <li data-role="list-divider">平成22年度</li>
+                    <!--<li name="22,春" onclick=setQuestionInfor(this)><a href="#testPages" >春<p class="ui-li-aside" id="li_22Haru"></p></a></li>-->
+                    <li name="22,春" onclick=setQuestionInfor(this) id="22noHaru"> 
+                        <a href="#testPages" >春<p class="ui-li-aside" id="li_22Haru">正解数: /25<br>未正解数 /25<br>未実施数 /25</p></a>
+                        <a href="#purchase" data-rel="popup" data-position-to="window" class="configListView">Purchase album</a>
+                    </li>
+                    <li data-role="list-divider">平成23年度</li>
+                    <!--<li name="23,春" onclick=setQuestionInfor(this)><a href="#testPages" >春<p class="ui-li-aside" id="li_23Haru"></p></a></li>-->
+                    <li name="23,春" onclick=setQuestionInfor(this)>
+                        <a href="#testPages" >春<p class="ui-li-aside" id="li_23Haru">正解数: /25<br>未正解数 /25<br>未実施数 /25</p></a>
+                        <a href="#purchase" data-rel="popup" data-position-to="window" class="configListView">Purchase album</a>
+                    </li>
+                    <li data-role="list-divider">平成24年度</li>
+                    <!--<li name="24,春" onclick=setQuestionInfor(this)><a href="#testPages" >春<p class="ui-li-aside" id="li_24Haru"></p></a></li>-->
+                    <li name="24,春" onclick=setQuestionInfor(this)>
+                        <a href="#testPages" >春<p class="ui-li-aside" id="li_24Haru">正解数: /25<br>未正解数 /25<br>未実施数 /25</p></a>
+                        <a href="#purchase" data-rel="popup" data-position-to="window" class="configListView">Purchase album</a>
+                    </li>
+                    <li data-role="list-divider">平成25年度</li>
+                    <!--<li name="25,春" onclick=setQuestionInfor(this)><a href="#testPages" >春<p class="ui-li-aside" id="li_25Haru"></p></a></li>-->
+                    <li name="25,春" onclick=setQuestionInfor(this)>
+                        <a href="#testPages" >春<p class="ui-li-aside" id="li_25Haru">正解数: /25<br>未正解数 /25<br>未実施数 /25</p></a>
+                        <a href="#purchase" data-rel="popup" data-position-to="window" class="configListView">Purchase album</a>
+                    </li>
+                    <li data-role="list-divider">平成26年度</li>
+                    <!--<li name="26,春" onclick=setQuestionInfor(this)><a href="#testPages" >春<p class="ui-li-aside" id="li_26Haru"></p></a></li>-->
+                    <li name="26,春" onclick=setQuestionInfor(this)>
+                        <a href="#testPages" >春<p class="ui-li-aside" id="li_26Haru">正解数: /25<br>未正解数 /25<br>未実施数 /25</p></a>
+                        <a href="#purchase" data-rel="popup" data-position-to="window" class="configListView">Purchase album</a>
+                    </li>   
+                </ul>
+                <div data-role="popup" id="purchase" data-theme="d" data-overlay-theme="d" class="ui-content" style="max-width:340px;">
+                    <h3>結果をリセットしますか?</h3>
+                    <p>データは復元できません。</p>
+                    <div style="text-align:center">
+                    <a href="#YearPage" id="deleteYes" data-role="button" data-theme="b" data-icon="check" data-inline="true" data-mini="true">&nbsp Yes!　</a>
+                    <a href="index.html" data-role="button"  data-inline="true" data-mini="true" data-theme="b" data-icon="delete">&nbsp No!　&nbsp </a>  
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+    <!--end YearPage -->
+
+    <!--start theQuestionPage -->
+    <div data-role="page" id="theQuestionPage">
+        <header data-role="header" data-id="common_header" data-position="fixed" data-theme="b"   data-tap-toggle="false">
+            <div class="ui-btn-left">
+                <a data-role="button" id="before_theQuestionPage1" href="#testPages" data-icon="back"   data-direction="reverse">問題一覧</a>
+                <a data-role="button" id="before_theQuestionPage2" data-icon="back" href="#toMondaiIchiran2" data-rel="popup" data-position-to="window">問題一覧</a>
+            </div>
+            <h1 class="questionHeader"></h1>
+        </header>
+        <section data-role="content">
+            <table id="QuestionTable">
+                <tr>
+                    <td id="QuestionTableNo">問</td>
+                    <td id="QuestionTableContext">問題文</td>
+                </tr>   
+            </table>
+            <div style="text-align:center"><img width="100%" heigth="100%" id = "pic_question"></div><br />
+            <div style="text-align:left"><img width="100%" heigth="100%" id = "pic_answer"></div>
+            <table id="OptionTable">
+                <tr>
+                    <td id="_Option1" class="_Options">ア.</td>
+                    <td id="Option1">選択肢1</td>
+                </tr>
+                <tr>
+                    <td id="_Option2" class="_Options">イ.</td>
+                    <td id="Option2">選択肢2</td>
+                </tr>   
+                <tr>
+                    <td id="_Option3" class="_Options">ウ.</td>
+                    <td id="Option3">選択肢3</td>
+                </tr>   
+                <tr>
+                    <td id="_Option4" class="_Options">エ.</td>
+                    <td id="Option4">選択肢4</td>
+                </tr>   
+            </table>
+        </section>
+        <div data-role="footer" data-id="common_footer" data-position="fixed" id="footerOption1" style="text-align:center"   data-tap-toggle="false">
+            <a data-role="button"  class="answerOptions" id="answerOption1" name="1">ア</a>
+            <a data-role="button"  class="answerOptions" id="answerOption2" name="2">イ</a>
+            <a data-role="button"  class="answerOptions" id="answerOption3" name="3">ウ</a>
+            <a data-role="button"  class="answerOptions" id="answerOption4" name="4">エ</a>
+            <div data-role="navbar" data-iconpos="bottom"　data-theme="b">
+                <ul>
+                    <li><a href="#theQuestionPage" data-icon="grid" class="ui-btn-active ui-state-persist" data-theme = "b">問題</a></li>
+                    <li><a id="answerTab" href="#theAnswerPage" data-icon="star" class="ui-disabled" data-theme = "b">解答</a></li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="popup" id="toMondaiIchiran2" data-theme="d" data-overlay-theme="d" class="ui-content" style="max-width:340px;">
+            <h3>問題一覧にもどります。</h3>
+            <a href="#testPages" data-role="button"  data-theme="b" data-icon="check" data-inline="true" data-mini="true">&nbsp Yes!　</a>
+            <a href="#theQuestionPage" data-role="button"  data-theme="b" data-icon="delete" data-inline="true" data-mini="true">&nbsp No!　&nbsp </a>    
+        </div> 
+    </div>
+    <!--end theQuestionPage -->
+
+    <!--start theAnswerPage -->
+    <div data-role="page" id="theAnswerPage">
+        <header data-role="header" data-id="common_header" data-position="fixed" data-theme="b"   data-tap-toggle="false">
+            <div class="ui-btn-left">
+                <a data-role="button" id="before_theAnswerPage2" href="#testPages" data-icon="back"   data-direction="reverse">問題一覧</a>
+                <a data-role="button" class="headerOption ui-btn-inline" id="before_theAnswerPage1" data-icon="back" href="#toMondaiIchiran" data-rel="popup" data-position-to="window">問題一覧</a>
+            </div>
+            <div class="ui-btn-right">
+                <a data-role="button" id="next_theAnswerPage"  data-icon="forward" class="btnToNext ui-btn-inline headerOption" >次の問題</a>
+                <a data-role="button" id="finish_theAnswerPage"  data-icon="forward" class="btnFinish ui-btn-inline headerOption"  style="display:none">終了</a>
+            </div>
+            <h1 class="questionHeader"></h1>
+        </header>
+        <div role="main" class="ui-content">
+            <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <h2 style="font-size:1em; font-weight:bold;text-align:center;">正解:<span style="font-size:1em; font-weight:bold;text-align:center;" id="prevAnswer">テストANSWER</span></h2>
+                    <h2 style="font-size:1em; font-weight:bold;text-align:center;">結果:
+                        <span id="maruBatu">
+                            <img style="width:1em; height:1em; margin:0 auto; display:none;" src="res/common/maru.gif" id="maruGif" >
+                            <img style="width:1em; height:1em; margin:0 auto; display:none;" src="res/common/batsu.gif" id="batsuGif">
+                        </span>
+                    </h2>
+                </div>
+                <div class="ui-block-b">
+                    <fieldset data-role="controlgroup">
+                        <input type="radio" name="radio-choice-1" id="radio-choice-1" value="1"  />
+                        <label for="radio-choice-1">完璧</label>
+                        <input type="radio" name="radio-choice-1" id="radio-choice-2" value="2"  />
+                        <label for="radio-choice-2">苦手</label>
+                    </fieldset>
+                </div>
+            </div>
+            <div>
+                <h2>【解説】</h2>
+                <p id="wholeGuidance">ここに全体的包括的な解説をいれる。</p>
+                <img style="width:100%; margin:0 auto; display:none;" id="picGuidance">
+            </div>
+            <table id="guidanceTable">
+                    <tr id="guidance1_option">
+                        <td>ア.</td>
+                        <td id="guidance1_contents">泣き顔でスマイルすり切れてシャイン踊るならレイン。ピント外れのわがままジュリエット。</td>
+                    </tr>
+                    <tr id="guidance2_option">
+                        <td>イ.</td>
+                        <td id="guidance2_contents">持て余してるフラストレーション。ゆーがっだイージーデイ。嘘を飲み込み静かに眠ってるまっどしてぃ</td>
+                    </tr>   
+                    <tr id="guidance3_option">
+                        <td>ウ.</td>
+                        <td id="guidance3_contents">わんないとまた一発だけメモリーやるつもりでもNO!NO!NO!ばいばいふぁにーぼーいばいばいふぁにーぼーい</td>
+                    </tr>   
+                    <tr id="guidance4_option">
+                        <td>エ.</td>
+                        <td id="guidance4_contents">心残りはあいつのことだぜピタリ来たのは最初で最後さわすれねーぜ、たまらねーぜ。もういやさもういやさもういやさベイビー</td>
+                    </tr>   
+            </table>
+        </div>
+        <div data-role="popup" id="toMondaiIchiran" data-theme="d" data-overlay-theme="d" class="ui-content" style="max-width:340px;">
+            <h3>問題一覧にもどります。</h3>
+            <a href="#testPages" data-role="button"  data-theme="b" data-icon="check" data-inline="true" data-mini="true">&nbsp Yes!　</a>
+            <a href="#theAnswerPage" data-role="button"  data-theme="b" data-icon="delete" data-inline="true" data-mini="true">&nbsp No!　&nbsp </a>  
+        </div>            
+        <div data-role="footer" data-id="common_footer" data-position="fixed" id="footerOption2" style="text-align:center"   data-tap-toggle="false">
+            <div data-role="navbar" data-iconpos="bottom">
+                <ul>
+                    <li><a href="#theQuestionPage" data-icon="grid" data-theme = "b">問題</a></li>
+                    <li><a href="#theAnswerPage" data-icon="star" class="ui-btn-active ui-state-persist" data-theme = "b">解答</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--end theAnswerPage -->
+
+    <!--start testPages-->
+    <div data-role="page" class="type-interior" id="testPages">
+        <header data-role="header" data-position="fixed" data-theme="b"   data-tap-toggle="false">
+            <a data-role="button" href="#YearPage" data-icon="back"   data-direction="reverse">年度選択</a>
+            <h1 class="questionHeader">年</h1>
+        </header>
+        <div data-role="content">
+            <div class="content-primary" id="listView_Question">
+                <ul data-role="listview" data-theme="d" data-divider-theme="d" id="ul_Year_Question"></ul>
+            </div>
+        </div>
+        <div data-role="popup" id="allCorrect" data-theme="d" data-overlay-theme="d" class="ui-content" style="max-width:340px;">
+            <h3>全問正解してます!</h3>
+            <a href="#" data-role="button" data-theme="b" data-icon="check" data-inline="true" data-mini="true">OK</a>  
+        </div>
+        <footer data-role="footer" class="ui-bar" data-position="fixed" id="footerOption3" data-theme="b"   data-tap-toggle="false">
+            <a id="btnPlayNormal"  data-role="button"  >全問出題</a>
+            <span>　　　　</span>
+            <a id="btnPlayWeak" data-role="button" data-rel="popup" data-position-to="window">不正解・未実施出題</a>
+            <a id="btnPlayWeak2"  href="#allCorrect" data-role="button" data-rel="popup" data-position-to="window">不正解・未実施出題</a>
+        </footer>
+    </div>
+    <!-- end testPages -->
+
+</body>
+</html>
